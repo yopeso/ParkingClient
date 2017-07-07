@@ -5,24 +5,10 @@
     android:orientation="vertical">
 
     <EditText
-        android:id="@+id/field_password"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:background="@drawable/roundedbutton"
-        android:ellipsize="end"
-        android:hint="@string/hint_password"
-        android:inputType="textPassword"
-        android:maxLines="1"
-        android:textAlignment="center"
-        android:textColorHint="@android:color/darker_gray"/>
-
-    <EditText
         android:id="@+id/field_email"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:layout_marginTop="15dp"
         android:background="@drawable/roundedbutton"
         android:ellipsize="end"
         android:hint="@string/hint_email"
@@ -31,6 +17,19 @@
         android:textAlignment="center"
         android:textColorHint="@android:color/darker_gray"/>
 
+    <EditText
+        android:id="@+id/field_password"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/roundedbutton"
+        android:ellipsize="end"
+        android:hint="@string/hint_password"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textColorHint="@android:color/darker_gray"/>
 
     <Button
         android:id="@+id/button_sign_in"

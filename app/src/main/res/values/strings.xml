@@ -24,4 +24,6 @@
     <string name="progress_downloading">Downloading</string>
     <string name="download_success">Success</string>
     <string name="download_failure">Failure</string>
+
+    <string name="splash_schreen">P A R K\nS P O T</string>
 </resources>
