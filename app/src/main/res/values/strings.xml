@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ParkingClient</string>
+    <string name="app_name">Park Spot</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
