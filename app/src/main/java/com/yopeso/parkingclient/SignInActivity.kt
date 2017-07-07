@@ -10,6 +10,7 @@ import android.util.Log
 import android.view.View
 import android.view.View.OnClickListener
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -35,11 +36,9 @@ class SignInActivity : BaseActivity(), OnClickListener {
         mEmailField = findViewById(R.id.field_email) as EditText
         mPasswordField = findViewById(R.id.field_password) as EditText
         val signInButton = findViewById(R.id.button_sign_in)
-        val signUpButton = findViewById(R.id.button_sign_up)
 
         // Click listeners
         signInButton.setOnClickListener(this)
-        signUpButton.setOnClickListener(this)
     }
 
     override fun onStart() {
@@ -54,7 +53,6 @@ class SignInActivity : BaseActivity(), OnClickListener {
     override fun onClick(v: View) {
         when (v.id) {
             R.id.button_sign_in -> signIn()
-            R.id.button_sign_up -> signUp()
         }
     }
 
@@ -86,30 +84,6 @@ class SignInActivity : BaseActivity(), OnClickListener {
                         onAuthSuccess(task.result.user)
                     } else {
                         Toast.makeText(this@SignInActivity, "Sign In Failed",
-                                Toast.LENGTH_SHORT).show()
-                    }
-                }
-    }
-
-    private fun signUp() {
-        Log.d(TAG, "signUp")
-        if (!validateForm()) {
-            return
-        }
-
-        showProgressDialog()
-        val email = mEmailField.getText().toString()
-        val password = mPasswordField.getText().toString()
-
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this) { task ->
-                    Log.d(TAG, "createUser:onComplete:" + task.isSuccessful)
-                    hideProgressDialog()
-
-                    if (task.isSuccessful) {
-                        onAuthSuccess(task.result.user)
-                    } else {
-                        Toast.makeText(this@SignInActivity, "Sign Up Failed",
                                 Toast.LENGTH_SHORT).show()
                     }
                 }

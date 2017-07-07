@@ -1,75 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="@color/colorPrimary"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".SignInActivity">
 
+    <RelativeLayout
+        android:id="@+id/car_animation_relative_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/icon"
+        <include
+            layout="@layout/item_car_animation"/>
+    </RelativeLayout>
+
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:src="@drawable/firebase_lockup_400" />
+        android:layout_below="@id/car_animation_relative_layout"
+        android:layout_marginTop="50dp">
 
-    <LinearLayout
-        android:id="@+id/layout_email_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/icon"
-        android:layout_centerHorizontal="true"
-        android:orientation="horizontal">
+        <include layout="@layout/item_login_layout"/>
 
-        <EditText
-            android:id="@+id/field_email"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:gravity="center_horizontal"
-            android:hint="@string/hint_email"
-            android:inputType="textEmailAddress"
-            android:maxLines="1" />
+    </RelativeLayout>
 
-        <EditText
-            android:id="@+id/field_password"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:gravity="center_horizontal"
-            android:hint="@string/hint_password"
-            android:inputType="textPassword"
-            android:maxLines="1" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/layout_buttons"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/layout_email_password"
-        android:layout_centerHorizontal="true"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/button_sign_in"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="@string/sign_in" />
-
-
-        <Button
-            android:id="@+id/button_sign_up"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="@string/sign_up" />
-
-    </LinearLayout>
-
+    <include layout="@layout/item_made_with_love"/>
 
 </RelativeLayout>

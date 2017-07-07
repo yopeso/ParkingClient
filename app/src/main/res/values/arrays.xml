@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="CarAnimations">
+        <item>com.github.glomadrian.grav.generator.animation.SideToSideAnimator</item>
+        <item>com.github.glomadrian.grav.generator.animation.ShakeAnimator</item>
+    </string-array>
+
+    <string-array name="gray">
+        <item>#E3E3E3</item>
+        <item>#C1BDBD</item>
+        <item>#A7A5A5</item>
+        <item>#F4EEEE</item>
+    </string-array>
+
+    <string-array name="black">
+        <item>#6C6D6D</item>
+        <item>#4D4E4E</item>
+        <item>#A7A5A5</item>
+        <item>#1C1C1C</item>
+    </string-array>
+</resources>

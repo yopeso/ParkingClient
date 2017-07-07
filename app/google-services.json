@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "933975596797-268046eaqf6mmg08nnrvch7a9pu39efu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yopeso.parkingclient",
+            "certificate_hash": "bd103ed649d75674fd3cf562167d24c7420a6d79"
+          }
+        },
+        {
           "client_id": "933975596797-ill1ihtvf9l5d2cmbimad67d48j968nj.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
