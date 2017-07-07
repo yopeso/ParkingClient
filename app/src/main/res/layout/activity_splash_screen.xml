@@ -24,49 +24,4 @@
         android:textSize="20sp"
         android:textStyle="bold"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:orientation="horizontal"
-        android:padding="16dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingRight="@dimen/splash_screen_bottom_text_right_padding"
-            android:text="@string/made_with"
-            android:textSize="12sp"/>
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_gravity="center"
-            android:paddingRight="8dp"
-            android:src="@drawable/like"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingRight="@dimen/splash_screen_bottom_text_right_padding"
-            android:text="@string/by_the"
-            android:textSize="12sp"/>
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="20dp"
-            android:layout_gravity="center"
-            android:paddingRight="@dimen/splash_screen_bottom_text_right_padding"
-            android:src="@drawable/android"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingRight="@dimen/splash_screen_bottom_text_right_padding"
-            android:text="@string/team"
-            android:textSize="12sp"/>
-    </LinearLayout>
-
-
 </RelativeLayout>
