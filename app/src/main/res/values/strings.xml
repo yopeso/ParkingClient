@@ -21,4 +21,7 @@
     <string name="made_with">MADE WITH</string>
     <string name="by_the">BY THE</string>
     <string name="team">TEAM</string>
+    <string name="progress_downloading">Downloading</string>
+    <string name="download_success">Success</string>
+    <string name="download_failure">Failure</string>
 </resources>
