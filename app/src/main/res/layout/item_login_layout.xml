@@ -4,7 +4,6 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-
     <EditText
         android:id="@+id/field_email"
         android:layout_width="300dp"
@@ -31,7 +30,6 @@
         android:maxLines="1"
         android:textAlignment="center"
         android:textColorHint="@android:color/darker_gray"/>
-
 
     <Button
         android:id="@+id/button_sign_in"
