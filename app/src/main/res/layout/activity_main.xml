@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true">
 
-        <include layout="@layout/item_car_animation"/>
+        <include layout="@layout/item_car_animation" />
     </RelativeLayout>
 
     <com.facebook.drawee.view.SimpleDraweeView
@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:adjustViewBounds="true"
-        android:rotation="-90"/>
+        android:rotation="-90" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab_refresh"
@@ -28,7 +28,16 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_margin="16dp"
-        android:src="@drawable/ic_action_refresh"/>
+        android:src="@drawable/ic_action_refresh" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_action_logout" />
 
 
 </RelativeLayout>

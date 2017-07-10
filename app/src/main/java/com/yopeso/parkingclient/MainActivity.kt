@@ -3,6 +3,7 @@ package com.yopeso.parkingclient
 import android.os.Bundle
 import com.facebook.drawee.backends.pipeline.Fresco
 import com.facebook.drawee.view.SimpleDraweeView
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 
@@ -21,6 +22,12 @@ class MainActivity : BaseActivity() {
         findViewById(R.id.fab_refresh).setOnClickListener {
             ivPhoto.setImageResource(0)
             syncImage()
+        }
+        findViewById(R.id.fab_logout).setOnClickListener {
+            showProgressDialog()
+            FirebaseAuth.getInstance().signOut()
+            startActivity(SignInActivity.newIntent(this))
+            finish()
         }
         syncImage()
     }
