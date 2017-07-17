@@ -8,7 +8,7 @@ android {
     defaultConfig {
         applicationId "com.yopeso.parkingclient"
         minSdkVersion 19
-        targetSdkVersion 25
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -19,29 +19,42 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+    }
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.github.glomadrian:Grav:1.1'
 
     compile "com.android.support:appcompat-v7:$supportVersion"
     compile "com.android.support:design:$supportVersion"
 
-    compile 'com.firebaseui:firebase-ui-database:1.2.0'
-
-    compile "com.google.firebase:firebase-auth:$gmsVersion"
-    compile "com.google.firebase:firebase-database:$gmsVersion"
-    compile "com.google.firebase:firebase-storage:$gmsVersion"
-
+    // For animated GIF support
+    compile 'com.facebook.fresco:animated-gif:1.3.0'
     // If your app supports Android versions before Ice Cream Sandwich (API level 14)
     compile 'com.facebook.fresco:animated-base-support:1.3.0'
     compile 'com.facebook.fresco:fresco:1.3.0'
 
-    // For animated GIF support
-    compile 'com.facebook.fresco:animated-gif:1.3.0'
+    compile 'com.firebaseui:firebase-ui-database:1.2.0'
+
+    compile 'com.github.glomadrian:Grav:1.1'
+
+    compile('com.google.api-client:google-api-client-android:1.22.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    compile('com.google.apis:google-api-services-gmail:v1-rev67-1.22.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+
+    compile "com.google.android.gms:play-services-auth:$gmsVersion"
+    compile "com.google.firebase:firebase-auth:$gmsVersion"
+    compile "com.google.firebase:firebase-database:$gmsVersion"
+    compile "com.google.firebase:firebase-storage:$gmsVersion"
 
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlinVersion"
+
+    compile 'pub.devrel:easypermissions:0.3.0'
 
     testCompile 'junit:junit:4.12'
 

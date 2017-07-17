@@ -109,6 +109,50 @@
           "status": 2
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:933975596797:android:aafe604c03d2444f",
+        "android_client_info": {
+          "package_name": "yopeso.com.parkingcamera"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "933975596797-1f2i85s3ta4r7iuihm6l6g51icdst48m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "yopeso.com.parkingcamera",
+            "certificate_hash": "fbe0242d53aec56891e526d447224cb80503dd89"
+          }
+        },
+        {
+          "client_id": "933975596797-bu5avl4260h2lvtg197psgau5mf6ep6j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtx_GkdLocPbi1DxgIzsHv1R3IWnORUZA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "933975596797-bu5avl4260h2lvtg197psgau5mf6ep6j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
     }
   ],
   "configuration_version": "1"

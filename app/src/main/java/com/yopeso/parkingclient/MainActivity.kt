@@ -3,6 +3,7 @@ package com.yopeso.parkingclient
 import android.os.Bundle
 import com.facebook.drawee.backends.pipeline.Fresco
 import com.facebook.drawee.view.SimpleDraweeView
+import com.google.android.gms.auth.api.Auth
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
@@ -25,6 +26,7 @@ class MainActivity : BaseActivity() {
         }
         findViewById(R.id.fab_logout).setOnClickListener {
             showProgressDialog()
+            Auth.GoogleSignInApi.signOut(mGoogleApiClient)
             FirebaseAuth.getInstance().signOut()
             startActivity(SignInActivity.newIntent(this))
             finish()
