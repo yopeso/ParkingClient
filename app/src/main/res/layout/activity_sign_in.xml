@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".SignInActivity">
+
+    <RelativeLayout
+        android:id="@+id/car_animation_relative_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <include
+            layout="@layout/item_car_animation"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/car_animation_relative_layout"
+        android:layout_marginTop="50dp">
+
+        <include layout="@layout/item_login_layout"/>
+
+    </RelativeLayout>
+
+    <include layout="@layout/item_made_with_love"/>
+
+</RelativeLayout>

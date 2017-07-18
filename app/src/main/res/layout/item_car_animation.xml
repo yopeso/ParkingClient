@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/car_animation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="50dp">
+
+    <ImageView
+        android:id="@+id/city"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/city"/>
+
+    <RelativeLayout
+        android:id="@+id/car_animation_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:paddingTop="70dp">
+
+
+        <ImageView
+            android:id="@+id/image_view_car_side"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/car_side"/>
+
+        <com.github.glomadrian.grav.GravView
+            android:id="@+id/grav_wind"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/relativeLayout2"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="12dp"
+            app:animationGenerators="@array/CarAnimations"
+            app:array_colors="@array/gray"
+            app:colorGenerator="com.github.glomadrian.grav.generator.paint.ArrayColorGenerator"
+            app:gravGenerator="com.github.glomadrian.grav.generator.grav.RectangleGenerator"
+            app:pointGenerator="com.github.glomadrian.grav.generator.point.RegularPointGenerator"
+            app:rectangle_height="1dp"
+            app:rectangle_width="15dp"
+            app:regular_cell_size="100"
+            app:shake_direction="vertical"
+            app:shake_variance="5dp"
+            app:side_to_side_direction="rightToLeft"
+            app:side_to_side_max_duration="1200"
+            app:side_to_side_min_duration="600"/>
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="75dp">
+
+            <com.github.glomadrian.grav.GravView
+
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_gravity="center_vertical"
+                app:animationGenerators="@array/CarAnimations"
+                app:array_colors="@array/black"
+                app:colorGenerator="com.github.glomadrian.grav.generator.paint.ArrayColorGenerator"
+                app:gravGenerator="com.github.glomadrian.grav.generator.grav.RectangleGenerator"
+                app:pointGenerator="com.github.glomadrian.grav.generator.point.RegularPointGenerator"
+                app:rectangle_height="5dp"
+                app:rectangle_width="100dp"
+                app:regular_cell_size="100"
+                app:shake_direction="vertical"
+                app:shake_variance="1dp"
+                app:side_to_side_direction="rightToLeft"
+                app:side_to_side_max_duration="800"
+                app:side_to_side_min_duration="400"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
