@@ -33,15 +33,16 @@
 
     <TextView
         android:id="@+id/button_sign_in"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@android:color/transparent"
-        android:padding="10dp"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_yellow_button"
+        android:gravity="center"
         android:text="@string/sign_in"
         android:textColor="@android:color/white"
         android:textSize="20sp"
-        android:textStyle="bold"/>
+        android:textStyle="normal"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -50,7 +51,8 @@
         android:paddingBottom="10dp"
         android:text="or"
         android:textColor="@android:color/white"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:textStyle="italic"/>
 
     <include layout="@layout/item_google_singin_button"/>
 
