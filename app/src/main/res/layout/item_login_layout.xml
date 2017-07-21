@@ -9,7 +9,7 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:background="@drawable/roundedbutton"
+        android:background="@drawable/rounded_white_button"
         android:ellipsize="end"
         android:hint="@string/hint_email"
         android:inputType="textEmailAddress"
@@ -23,7 +23,7 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginTop="15dp"
-        android:background="@drawable/roundedbutton"
+        android:background="@drawable/rounded_white_button"
         android:ellipsize="end"
         android:hint="@string/hint_password"
         android:inputType="textPassword"
@@ -31,24 +31,30 @@
         android:textAlignment="center"
         android:textColorHint="@android:color/darker_gray"/>
 
-    <Button
+    <TextView
         android:id="@+id/button_sign_in"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@android:color/transparent"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_yellow_button"
+        android:gravity="center"
         android:text="@string/sign_in"
         android:textColor="@android:color/white"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:textStyle="normal"/>
 
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/button_google_sign_in"
-        android:layout_width="150dp"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@android:color/transparent"
-        android:gravity="center_vertical"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:text="or"
         android:textColor="@android:color/white"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:textStyle="italic"/>
+
+    <include layout="@layout/item_google_singin_button"/>
+
 
 </LinearLayout>
