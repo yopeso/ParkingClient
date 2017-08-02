@@ -22,13 +22,14 @@
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity"/>
         <activity android:name=".SignInActivity"/>
-
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="4d7b0034eb81fcc2c7d19fb3beacc41214bb28fd" />
     </application>
 
 </manifest>

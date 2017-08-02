@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'io.fabric'
 apply plugin: 'kotlin-android'
 
 android {
@@ -47,7 +47,9 @@ dependencies {
     compile('com.google.apis:google-api-services-gmail:v1-rev67-1.22.0') {
         exclude group: 'org.apache.httpcomponents'
     }
-
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
+        transitive = true;
+    }
     compile "com.google.android.gms:play-services-auth:$gmsVersion"
     compile "com.google.firebase:firebase-auth:$gmsVersion"
     compile "com.google.firebase:firebase-database:$gmsVersion"

@@ -21,7 +21,7 @@ class MainActivity : BaseActivity() {
         mStorageRef = FirebaseStorage.getInstance().reference
         ivPhoto = findViewById(R.id.iv_current_photo) as SimpleDraweeView
         findViewById(R.id.fab_refresh).setOnClickListener {
-            ivPhoto.setImageResource(0)
+            ivPhoto.setActualImageResource(0)
             syncImage()
         }
         findViewById(R.id.fab_logout).setOnClickListener {
